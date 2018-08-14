@@ -122,21 +122,21 @@ print "Prediction made in {} seconds. Test accuracy is {}".format(round(tt,3), r
 #     if line_split[41]=='normal.':
 #         attack = 0.0
 #     return LabeledPoint(attack, np.array([float(x) for x in clean_line_split]))
-#
+
 # training_data = raw_data.map(parse_interaction)
 # test_data = test_raw_data.map(parse_interaction)
-#
+
 # t0 = time()
 # logit_model = SVMWithSGD.train(training_data)
 # tt = time() - t0
-#
+
 # print "--------------------- Classifier trained in {} seconds".format(round(tt,3))
-#
+
 # labels_and_preds = test_data.map(lambda p: (p.label, logit_model.predict(p.features)))
-#
+
 # t0 = time()
 # test_accuracy = labels_and_preds.filter(lambda (v, p): v == p).count() / float(test_data.count())
 # tt = time() - t0
-#
+
 # print "-------------------- Prediction made in {} seconds. Test accuracy is {}".format(round(tt,3), round(test_accuracy,4))
 
